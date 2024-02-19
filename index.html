@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abril Barrera - Portafolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-------------------------------------------------CSS--------------------------------------------------->
+
+  <style>
+    body {
+      font-family: 'Oswald', sans-serif;
+      background-color: #FFF2F9;
+      color: purple;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #FFCBE6;
+      color: #CF6AAF;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: right;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #bb5abb !important;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: red !important;
+    }
+
+    main {
+      padding: 10px;
+      position: relative;
+      min-height: calc(100vh - 200px);
+    }
+
+    section {
+      margin-bottom: 20px;
+      margin-top: 20px;
+      color: purple;
+      text-align: justify;
+      position: relative;
+    }
+
+    footer {
+      background-color: #FFCBE6;
+      color: purple;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #profile-img {
+      position: absolute;
+      width: 480px;
+      left: 200px;
+      top: 60px;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    #profile-img:hover {
+      transform: scale(1.1);
+    }
+
+    #content {
+      position: absolute;
+      width: 45%;
+      top: 55px;
+      right: 80px;
+      padding: 80px;
+      z-index: 2;
+    }
+
+    .social-icons {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .gif-icon {
+      position: absolute;
+      width: 100px;
+      top: 0px;
+      left: 30px;
+      z-index: 1;
+      max-width: 100%;
+    }
+
+    .gif-icono {
+      position: absolute;
+      width: 200px;
+      top: 15px;
+      right: 350px;
+      z-index: -1;
+      max-width: 100%;
+    }
+
+    #content p {
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: #bb5abb;
+      font-weight: bold;
+    }
+
+    .skill-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    .skill-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    .skill-icons li {
+      margin: 10px;
+    }
+
+    .skill-icons img {
+      width: 50px;
+      height: 50px;
+    }
+
+    @media only screen and (max-width: 1120px) {
+      #profile-img {
+        position: relative;
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        top: initial;
+        left: initial;
+        transform: initial;
+      }
+
+      #content {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        top: initial;
+        right: initial;
+        padding: 20px;
+        z-index: initial;
+      }
+
+      .gif-container {
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .gif-icon {
+        position: relative;
+        width: 100px;
+        max-width: 100%;
+        margin: 20px auto;
+      }
+
+      .gif-icono {
+        position: relative;
+        width: 200px;
+        max-width: 100%;
+        margin: 20px auto;
+      }
+
+      .social-icons {
+        position: static;
+        width: 100%;
+        max-width: 480px;
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      .social-icons a {
+        display: inline-block;
+      }
+
+      .skill-icons {
+        justify-content: center;
+      }
+
+      .skill-icons li {
+        margin: 10px;
+      }
+
+      .btn-enviar-correo {
+        background-color: #bb5abb; /* Cambia el color del botón al rosa #bb5abb */
+        border-color: #bb5abb; /* Cambia el color del borde al rosa #bb5abb */
+      }
+
+      .btn-enviar-correo:hover {
+        background-color: #bb5abb; /* Mantiene el color del botón al rosa #bb5abb cuando se pasa el mouse */
+        border-color: #bb5abb; /* Mantiene el color del borde al rosa #bb5abb cuando se pasa el mouse */
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+<!-------------------------------------------------Header--------------------------------------------------->
+
+  <header>
+    <div class="container-fluid" style="background-color: #FFCBE6; padding: 10px 20px;">
+      <h1>Abril Barrera - Portafolio</h1>
+      <nav>
+        <ul class="nav justify-content-end">
+          <li class="nav-item"><a class="nav-link" href="#home">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Biografía">Biografía</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-------------------------------------------------About--------------------------------------------------->
+
+  <main>
+    <div class="gif-container">
+      <img src="img/corazon.gif" alt="GIF Icon" class="gif-icon">
+      <section>
+        <img src="img/photo_2024-02-18_14-54-05f.png" alt="Abril Barrera" id="profile-img" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div id="content">
+          <p>¡Hola! Soy Abril Barrera. Arquitecta con experiencia en diseño, investigación y docencia, ahora fusionando mi creatividad con habilidades técnicas en desarrollo Java Full Stack, adquiridas en el bootcamp de Generation México.</p>
+        </div>
+      </section>
+      <img src="img/abriilnombre.gif" alt="GIF Icono" class="gif-icono">
+    </div>
+  </main>
+  <!-------------------------------------------------Biografía--------------------------------------------------->
+  <section id="Biografía">
+    <div class="container">
+      <h2>Biografía</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Desarrolladora Java Fullstack Jr.</h5>
+              <p class="card-text">Como Full Stack Java Developer,a partir de las habilidades que Generation México me proporcionó, poseo una formación en desarrollo web tanto en el frontend como en el backend.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Maestra en Arquitectura Ciudad y Territorio</h5>
+              <p class="card-text">Conocimiento especializado en aspectos históricos, técnicos, sociales, económicos y ambientales relacionados con la vivienda, y gestión territorial incluyendo la planificación, diseño, construcción, financiamiento, administración y políticas públicas..</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Docente de la Facultad de Arquitectura de la UNAM</h5>
+              <p class="card-text">Guiar a los estudiantes en el aprendizaje de los conceptos necesarios para desarrollar habilidades en el ámbito del diseño urbano y arquitectónico, así como las herramientas necesarios para diseñar ciudades y espacios urbanos que sean sostenibles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------------------------------------------------Habilidades--------------------------------------------------->
+
+  <section id="habilidades">
+    <div class="container">
+      <h2>Habilidades</h2>
+      <ul class="skill-icons">
+        <li>
+          <img src="img/html-5.png" alt="HTML5">
+          <p>HTML5</p>
+        </li>
+        <li>
+          <img src="img/CSS.png" alt="CSS3">
+          <p>CSS3</p>
+        </li>
+        <li>
+          <img src="img/javascrpt.png" alt="JavaScript">
+          <p>JavaScript</p>
+        </li>
+        <li>
+          <img src="img/java.png" alt="Java">
+          <p>Java</p>
+        </li>
+        <li>
+          <img src="img/git.png" alt="Git">
+          <p>Git</p>
+        </li>
+        <li>
+          <img src="img/github.png" alt="GitHub">
+          <p>GitHub</p>
+        </li>
+        <li>
+          <img src="img/visual-basico.png" alt="VS Code">
+          <p>VS Code</p>
+        </li>
+        <li>
+          <img src="img/ADOBE.png" alt="Paquetería Adobe">
+          <p>Paquetería Adobe</p>
+        </li>
+        <li>
+          <img src="img/map_3350004.png" alt="SpaceSyntax">
+          <p>SpaceSyntax</p>
+        </li>
+        <li>
+          <img src="img/GIS.png" alt="ArcMap">
+          <p>ArcMap</p>
+        </li>
+        <li>
+          <img src="img/AUTOCAD.png" alt="AutoCAD">
+          <p>AutoCAD</p>
+        </li>
+        <li>
+          <img src="img/REVIT.png" alt="Revit">
+          <p>Revit</p>
+        </li>
+        <li>
+          <img src="img/SKETCH.png" alt="SketchUp">
+          <p>SketchUp</p>
+        </li>
+        <li>
+          <img src="img/FIGMA.png" alt="Figma">
+          <p>Figma</p>
+        </li>
+        <li>
+          <img src="img/BOOTSTRAP.png" alt="Bootstrap">
+          <p>Bootstrap</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-------------------------------------------------Contacto---------------------------------------------------->
+  <section id="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <form action="mailto:tudirecciondecorreo@example.com" method="post" enctype="text/plain">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-enviar-correo" style="background-color: #bb5abb;">Enviar Correo</button>
+      </form>
+    </div>
+  </section>
+  <!-------------------------------------------------Footer---------------------------------------------------->
+
+  <footer style="background-color: #FFCBE6; color: #0C2F69; padding: 10px;">
+  </footer>
+
+  <div class="social-icons">
+    <a href="https://www.instagram.com/abrilabrilo?igsh=MWN4MGlxYWhxeTJ4Nw=="><img src="img/instagram.png" alt="Instagram"></a>
+    <a href="https://www.facebook.com/aileen.barrera"><img src="img/facebook (1).png" alt="Facebook"></a>
+    <a href="https://github.com/abrilbar"><img src="img/github.png" alt="GitHub"></a>
+    <a href="https://www.linkedin.com/in/abril-barrera1/"><img src="img/LinkedIn_icon.svg.png" alt="LinkedIn"></a>
+    <a href="https://www.tiktok.com/@abrilabrilo_?_t=8k0Wz6k3XgE&_r=1"><img src="img/tik-tok.png" alt="TikTok"></a>
+  </div>
+
+</body>
+</html>
